@@ -1,0 +1,23 @@
+﻿
+.home-euler {
+    margin-top: 200px;
+    margin-bottom: 75px;
+
+    &__intro {
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 2px 5px 5px rgba(black, 0.31);
+
+        h3 {
+            margin-bottom: 30px;
+        }
+    }
+
+    pre.code {
+        padding: 25px;
+        border-radius: 15px;
+        background: #413a3a;
+        box-shadow: 0 2px 5px 5px rgba(#413a3a, 0.31);
+        color: white;
+    }
+}

@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<section class="home-euler">
+    <div class="grid-container">
+
+        <div class="flex flex-spacing justify-around">
+            <div class="cell home-euler__intro">
+                <h3>Project Euler</h3>
+                <p>A collection of solutions for problems sourced from <a href="/">www.projecteuler.net</a></p>
+                <p>Includes code and can produce answer in the browser.</p>
+            </div>
+
+            <div class="cell">
+                @* will be read from file*@
+                <pre class="code">
+int sum = 0;
+int[] divisors = new int[] { 3, 5 };
+
+for (int i = 1; i < 1000; i++)
+    if (divisors.Any(d => i % d == 0)) { sum += i; }
+
+return sum;
+                </pre>
+            </div>
+        </div>
+
+    </div>
+</section>

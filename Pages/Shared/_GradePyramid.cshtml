@@ -1,0 +1,42 @@
+﻿@model Newtonsoft.Json.Linq.JArray
+
+<div class="grade-pyramid" id="gradePyramid">
+    <div class="title">
+        <p>Your Pyramid</p>
+    </div>
+
+    @foreach (var grade in Model)
+    {
+        <div class="grade-info">
+            <div class="grade-count">@grade["Count"]</div>
+            <div class="grade-bar" data-grade-tally="@grade["Count"]">
+                <div class="grade-bar__segment redpoint" data-grade-tally="@grade["Redpoint"]"></div>
+                <div class="grade-bar__segment flash" data-grade-tally="@grade["Flash"]"></div>
+                <div class="grade-bar__segment onsight" data-grade-tally="@grade["Onsight"]"></div>
+                <div class="grade-bar__segment onsight" data-grade-tally="@grade["Onsight"]"></div>
+                <div class="grade-bar__segment flash" data-grade-tally="@grade["Flash"]"></div>
+                <div class="grade-bar__segment redpoint" data-grade-tally="@grade["Redpoint"]"></div>
+
+                <p class="grade-bar__tag">@grade["Grade"]</p>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    let grades = @Html.Raw(Model);
+
+    let max = grades.reduce((a, b) => a.Count >= b.Count ? a : b);
+
+    let gradePyramid = document.getElementById("gradePyramid");
+
+    gradePyramid.querySelectorAll(".grade-bar").forEach(bar => {
+        let tally = bar.dataset.gradeTally
+        bar.style.width = `${tally / max.Count * 100}%`;
+
+        bar.querySelectorAll(".grade-bar__segment").forEach(segment => {
+            let segmentTally = segment.dataset.gradeTally
+            segment.style.width = `${segmentTally / tally * 50}%`;
+        });
+    });
+</script>

@@ -1,0 +1,14 @@
+﻿@page "{slug}"
+@model AaronSite.Pages.TierModel
+@{
+}
+
+@if (Model.IsErrored)
+{
+    <partial name="Error" model="404" />
+}
+else
+{
+    <partial name="@Model.Template" model="@Model.ModelToPass" />
+}
+

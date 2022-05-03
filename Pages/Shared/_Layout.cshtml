@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AaronSite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link href="~/css/easyInput.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.min.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/euler">Project Euler</a>
+            <a href="/training">Training</a>
+            <a href="/slider">Slider</a>
+            <a href="/qstring">QString</a>
+        </nav>
+    </header>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+    </footer>
+
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/aqstring.js" asp-append-version="true"></script>
+
+</body>
+</html>

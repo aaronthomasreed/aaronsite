@@ -1,0 +1,16 @@
+﻿@model BlogsModel
+@{
+}
+
+<section class="blog-landing">
+    <div>
+        <p>Blogs</p>
+    </div>
+
+    <div>
+        @foreach (var item in Model.Page.Children)
+        {
+            <p><a href="@item.Url">@item.PageTitle</a></p>
+        }
+    </div>
+</section>

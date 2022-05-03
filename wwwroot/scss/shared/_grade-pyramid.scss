@@ -1,0 +1,66 @@
+﻿/// <reference path="../global/_var" />
+
+.grade-pyramid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #e9e9e9;
+    padding: 30px 15px 15px 30px;
+    box-shadow: 0 2px 5px 5px rgba(#e9e9e9, 0.31);
+
+    .title {
+        margin-bottom: 30px;
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .grade-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .grade-count {
+            width: 50px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    .grade-bar {
+        height: 35px;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 2px;
+        position: relative;
+        justify-content: center;
+
+        p {
+            position: absolute;
+            align-self: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .grade-bar__segment {
+            height: 100%;
+
+            &.redpoint {
+                background: #ff1000;
+            }
+
+            &.flash {
+                background: #fba000;
+            }
+
+            &.onsight {
+                background: #0088fb;
+            }
+        }
+    }
+}

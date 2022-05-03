@@ -1,0 +1,31 @@
+﻿@import "global/_var.scss";
+@import "global/_grid.scss";
+
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+
+* {
+    margin: 0;
+    box-sizing:border-box;
+    font-family: $font-primary;
+}
+
+main {
+    margin-top: 100px;
+}
+
+pre.code {
+    font-family: $font-code;
+    white-space: pre-wrap;
+}
+
+.grid-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@import "templates/home.scss";
+@import "templates/training.scss";
+
+@import "shared/_grade-pyramid.scss";

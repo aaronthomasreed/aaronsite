@@ -1,0 +1,20 @@
+﻿@model AaronSite.Pages.TrainingModel
+@{
+}
+
+<section class="training">
+    <div class="grid-container">
+
+        <div class="flex flex-spacing">
+            <div class="training__overview cell large-6 small-12">
+                <p>View full list of climbs <a href="/training/">here</a></p>
+
+            </div>
+
+            <div class="training__pyramid cell large-6 small-12">
+                <partial name="Shared/_GradePyramid" model="Model.GradePyramid" />
+            </div>
+        </div>
+
+    </div>
+</section>
